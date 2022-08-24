@@ -1,0 +1,250 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/fonts" as *;
+
+.inventory-formpage {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: relative;
+    top: -4rem;
+
+    @include tablet{
+        top: -6rem;
+    }
+
+    background-color: white;
+    overflow: hidden;
+
+    @include tablet {
+        width: 91.665%;
+        max-width: 1020px;
+    }
+
+    &__top-container {
+        padding-top: 32px;
+        width: 84.33%;
+        margin: auto;
+        padding-bottom: 1.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 -2rem;
+        padding: 2rem 3.5rem;
+        border-bottom: 1px solid $cloud;
+
+        @include tablet {
+            margin-inline: 29px auto;
+            margin: 0 -4rem;
+            padding: 2rem 6rem;
+            border-bottom: 2px solid rgba($color: $cloud, $alpha: .25);
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__back-arrow {
+        margin-right: 8px;
+        height: fit-content;
+    }
+
+    &__heading {
+        box-sizing: border-box;
+        margin-block: 0;
+    }
+
+    &__form {
+    }
+}
+
+.inventory-form {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin-inline: auto;
+    }
+
+    &__section {
+        width: 83.33%;
+        margin: auto;
+        margin-bottom: 8px;
+        flex-grow: 1;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            margin-inline: 5.001% auto;
+        }
+
+        &--details {
+            border-bottom: 1px solid $cloud;
+            margin: 0 -1rem;
+            padding: 0 2.75rem;
+            padding-bottom: 0.5rem;
+
+            @include tablet{
+                border-bottom: none;
+                border-right: 2px solid rgba($color: $cloud, $alpha: .25);
+                padding-right: 0;
+                margin: 0;
+                padding: 0;
+                padding-bottom: 1rem;
+                padding-left: 2rem;
+            }
+        }
+
+        &--availability{
+            @include tablet{
+                margin: 0;
+                padding-left: 2rem;
+            }
+            
+        }
+    }
+
+    &__heading {
+        margin-bottom: 24px;
+
+        @include tablet {
+            margin-block: 24px 32px;
+        }
+    }
+
+    &__input-container {
+        @include tablet {
+            width: 90%;
+        }
+
+        &--size {
+            @include tablet {
+                width: 90%;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 4px;
+
+        &--status {
+            @include tablet {
+                width: fit-content;
+                padding-left: 0.25rem;
+                line-height: normal;
+            }
+        }
+    }
+
+    &__radios {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &__radio {
+        display: flex;
+        width: 50%;
+        @include tablet {
+            width: 40%;
+        }
+        @include desktop{
+            width: 27.5%;
+        }
+    }
+
+    &__input {
+        box-sizing: border-box;
+        height: 36px;
+        border-radius: 20px;
+        padding-inline: 16px;
+        width: 100%;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+
+        @include tablet {
+            margin-bottom: 24px;
+        }
+
+        &--status {
+            height: 1rem;
+            width: 1rem;
+            margin-left: 0;
+            margin-right: 0.5rem;
+
+            @include tablet{
+                margin-right: .25rem;
+                margin-top: .3rem;
+            }
+        }
+
+        &--textarea {
+            min-height: 8rem;
+            height: fit-content;
+            resize: none;
+            padding-top: 0.5rem;
+
+            @include tablet {
+            }
+        }
+    }
+
+    &__clickables {
+        width: 83.33%;
+        padding-inline: 8.5%;
+        margin-top: 8px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: $light-grey;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-end;
+            padding-inline: 5.001%;
+            width: 100%;
+        }
+    }
+
+    &__button {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border: 1px solid $cloud;
+        border-radius: 20px;
+        color: $slate;
+
+        @include tablet {
+            width: 72px;
+        }
+
+        &--add {
+            background-color: $indigo;
+            color: $white;
+            border: 1px solid $indigo;
+            width: 46%;
+
+            @include tablet {
+                margin-left: 16px;
+                width: 3.8rem;
+            }
+        }
+
+        &--cancel {
+            width: 8.5rem;
+
+            @include tablet{
+                width: 4.5rem;
+            }
+        }
+
+        &-container {
+            width: 8.5rem;
+            @include tablet{
+                
+                width: 4.5rem;
+            }
+        }
+    }
+}

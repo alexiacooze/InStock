@@ -1,0 +1,123 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+// html {
+//   box-sizing: border-box;
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.header {
+  background-color: #232940;
+  height: 13rem;
+
+  @include tablet {
+    height: 12rem;
+  }
+
+  &__container {
+    padding: 1rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    @include desktop{
+      padding: 1rem 0;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+  }
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav-menu {
+    display: flex;
+    justify-content: space-around;
+
+    @include tablet
+  }
+
+  
+  &__warehouses-link {
+    width: 160px;
+    height: 36px;
+    font-weight: bold;
+    
+    @include tablet {
+      margin-right: 2rem;
+      padding-left: 1rem;
+      width: 100%;
+      padding-right: 1rem;
+    }
+  }
+  
+  &__warehouses-link--active {
+    background-color: #13182c;
+    border-radius: 20px;
+
+    @include tablet {
+      margin-right: 2rem;
+      padding-left: 1rem;
+      width: 100%;
+      padding-right: 1rem;
+    }
+  }
+
+  &__inventory-link{
+    width: 140px;
+    height: 36px;
+    text-align: center;
+    font-weight: bold;
+    @include tablet {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__inventory-link--active {
+    background-color: #13182c;
+    border-radius: 20px;
+
+    @include tablet {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__warehouses {
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  &__nav-link {
+  }
+
+  &__inventory {
+    color: white;
+    list-style-type: none;
+    padding-top: 0.5rem;
+  }
+}

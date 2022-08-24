@@ -1,0 +1,21 @@
+// Media Query Breakpoints
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1020px;
+
+// Primary Colours
+$black: #13182c; // Global text color
+$indigo: #2e66e5; // Interactive elements
+$white: #ffffff; // Global white color
+
+// Secondary Colours
+$slate: #5c667e; // Table column headers & placeholder text
+$cloud: #bdc5d5; // Outlines, dividers, borders, table sorting icon
+
+// Background Colours
+$graphite: #232940; // Top navigation header background, CTA button hover state background
+$light-grey: #f7f8f9; // Page background,table column header background, CTA background
+
+//Suporting Colours
+$green: #158463; // “In stock” label
+$red: #c94515; // “Out of stock” label, error states & delete icon

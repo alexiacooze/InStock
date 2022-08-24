@@ -1,0 +1,136 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/modals";
+
+.warehouselist {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  background-color: $white;
+
+  @include tablet {
+    padding: 1rem 2rem;
+  }
+
+  @include desktop {
+    padding: 1rem 2.5rem;
+    padding-bottom: 0;
+  }
+
+  &__header {
+    padding: 0 0.5rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+    }
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-search {
+      border-radius: 50px;
+      border: 1px solid $cloud;
+      background-image: url(../../assets/Icons/search-24px.svg);
+      background-repeat: no-repeat;
+      background-position: right 1rem top 0.4rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      height: 2.25rem;
+
+      @include tablet {
+        width: 11.625rem;
+        background-position: right 1rem top 0.3rem;
+        margin: 1rem;
+      }
+
+      @include desktop {
+        width: 16.25rem;
+      }
+    }
+  }
+
+  &__title--display {
+    display: none;
+    padding: 0 0.5rem;
+    background: $light-grey;
+    align-items: center;
+    margin: 0 -2rem;
+    padding: 0.75rem 2rem;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    & h4 {
+      width: 8.5rem;
+      margin: 0;
+
+      @include tablet {
+        width: 8rem;
+      }
+
+      @include desktop {
+      }
+
+      &:last-child {
+        text-align: right;
+
+        @include tablet {
+          width: 7.5rem;
+        }
+      }
+
+      &:nth-child(2) {
+        @include desktop {
+          width: 15rem;
+          margin-left: -.5rem;
+          margin-right: 1rem;
+        }
+      }
+      &:nth-child(1) {
+        @include desktop {
+          width: 12rem;
+        }
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      margin: 0 -2.5rem;
+      padding: 0.75rem 2.5rem;
+    }
+  }
+
+  &__container {
+    margin: 0 1rem;
+    position: relative;
+    top: -4rem;
+
+    @include tablet {
+      margin: 0 2rem;
+      top: -6rem;
+    }
+    @include desktop {
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,246 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.inventory {
+  font-family: "Titillium Web";
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+
+
+    @include tablet {
+      margin: 2rem;
+      bottom: 5.5rem;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      width: 1020px;
+    }
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+
+    @include tablet{
+      padding: 0rem 2rem;
+    }
+  }
+
+  &__title-container {
+    display: flex;
+  }
+
+  &__back-arrow {
+    margin-right: 8px;
+    height: fit-content;
+    margin-top: 2.2rem;
+  }
+
+  &__title {
+    color: $black;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    margin-top: 2.3rem;
+
+    @include tablet{
+      margin-bottom: 1.89rem;
+    }
+  }
+
+  &__edit-container {
+    background-color: $indigo;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__edit-image {
+    filter: brightness(0) invert(1);
+  }
+
+  &__edit-text {
+  }
+
+
+  &__quantity-container {
+    @include tablet{
+      padding-left: 2rem;
+      width: 40%;
+    }
+  }
+
+}
+
+.inventory-info {
+  font-family: "Titillium Web";
+  border-top: 1px solid #bdc5d5;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__section--one {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+
+    @include tablet {
+      width: 35%;
+      padding-left: 2rem;
+    }
+
+    @include desktop {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__description-title {
+    text-transform: uppercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.688rem;
+    line-height: .2rem;
+    font-weight: 600;
+    color: $slate;
+    margin-top: 1rem;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
+
+  &__description {
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__category-title {
+    text-transform: uppercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.688rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $slate;
+  }
+
+  &__category {
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.813rem;
+    line-height: .2rem;
+    font-weight: 400;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__section--2 {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include tablet {
+      margin-top: 1.5rem;
+      padding-left: 3rem;
+      margin-bottom: 2rem;
+      border-left: 1px solid #bdc5d5;
+      width: 40%;
+    }
+    @include desktop {
+      margin-right: 13rem;
+    }
+  }
+  &__position-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__status-title {
+    text-transform: uppercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.688rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $slate;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
+
+  &__status {
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.813rem;
+    font-weight: 400;
+
+    @include tablet {
+      margin-right: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__quantity-title {
+    text-transform: uppercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.688rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $slate;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
+
+  &__quantity {
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.813rem;
+    line-height: .2rem;
+    font-weight: 400;
+    padding-right: 4rem;
+  }
+
+  &__warehouse-title {
+    text-transform: uppercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.688rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $slate;
+
+    @include tablet {
+      margin-top: 1rem;
+    }
+  }
+
+  &__warehouse {
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+    font-size: 0.813rem;
+    line-height: .2rem;
+    font-weight: 400;
+  }
+}

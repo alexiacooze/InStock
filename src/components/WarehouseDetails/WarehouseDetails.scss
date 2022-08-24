@@ -1,0 +1,214 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use "../../partials/modals";
+
+.warehousedetails{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, .1);
+    border-radius: 3px;
+    background-color: $white;
+
+    @include tablet{
+        padding: 1rem 2rem;
+    }
+
+    @include desktop{
+        padding: 1rem 2.5rem;
+        padding-bottom: 0;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.5rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $cloud;
+        margin: 0 -1rem;
+
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 -2rem;
+            padding: 0 2rem;
+        }
+        @include desktop{
+            margin: 0 -2.5rem;
+            padding: 0 2.5em;
+        }
+
+        &--return{
+            display: flex;
+            align-items: center;
+        }
+
+        &--title{
+            padding-left: .75rem;
+        }
+        
+        &--edit{
+            filter: brightness(0) invert(1);
+            width: 1.25rem;
+            height: 1.25rem;
+            padding-top: .25rem;
+            
+            &-container{
+                background-color: $indigo;
+                width: 2.25rem;
+                height: 2.25rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include tablet{
+                    width: fit-content;
+                    padding: 0 1rem;
+                    border-radius: 24px;
+                }
+
+            }
+
+            &-text{
+                display: none;
+                color: $white;
+                padding-left: .25rem;
+
+                @include tablet{
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    &__info{
+        padding: 0 .5rem;
+        padding-top: 1rem;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        @include desktop{
+            padding: 1.5rem 0;
+        }
+
+        & h4{
+            margin: 0;
+            margin-bottom: 4px;
+        }
+        & p{
+            margin: 0; 
+        }
+        
+    }
+
+    &__address{
+        @include tablet{
+            width: 20%;
+        }
+    }
+
+    &__contact{
+        display: flex;
+        padding-top: 2.25rem;
+
+        @include tablet{
+            padding-top: 0;
+            width: 55%;
+            border-left: 1px solid $cloud;
+            padding-left: 2rem;
+        }
+
+        @include desktop{
+            width: 50.5%;
+            padding-left: 3rem;
+        }
+
+        &--box{
+            width: 7.5rem;
+            margin-right: 1.5rem;
+
+            @include tablet{
+                width: 50%;
+            }
+
+            &--name{
+                width: 36%;
+            }
+        }
+    }
+
+    &__title--display{
+        display: none;
+        padding: 0 .5rem;
+        background: $light-grey;
+        align-items: center;
+        margin: 0 -2rem;
+        padding: .75rem 2rem;
+        
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include desktop{
+            margin: 0 -2.5rem;
+            padding: .75rem 2.5rem;
+        }
+
+        & h4{
+            width: 8.5rem;
+            margin: 0;
+
+            @include tablet{
+                display: flex;
+                align-items: center;
+            }
+
+            & img{
+                width: 1rem;
+                padding-left: .25rem;
+            }
+
+            &:last-child{
+                text-align: right;
+
+                @include tablet{
+                    width: 4rem;
+                }
+                @include desktop{
+                    width: 4.5rem;
+                }
+            }
+
+            &:nth-child(3){
+                padding-left: 1rem;
+
+                @include desktop{
+                    padding-left: 2rem;
+                }
+            }   
+        }
+
+    }
+
+    &__container{
+        margin: 0 1rem;
+        position: relative;
+        top: -5rem;
+
+        @include tablet{
+            margin: 0 2rem;
+            top: -6.2rem;
+        }
+        @include desktop{
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+    }
+}

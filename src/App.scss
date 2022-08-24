@@ -1,0 +1,46 @@
+@use "./partials/fonts";
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+select {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+
+  background-image: url("./assets/Icons/arrow_drop_down-24px.svg");
+  background-position: top .25rem right .75rem;
+  background-repeat: no-repeat;
+}

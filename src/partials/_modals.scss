@@ -1,0 +1,95 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  background-color: $white;
+  height: 91vh;
+  padding: 60px 16px 24px 16px;
+
+  @include tablet {
+    top: 15%;
+    height: auto;
+    margin: 48px;
+    padding: 40px 64px;
+    background-color: $white;
+    border-radius: 3px;
+  }
+
+  @include desktop {
+    width: 672px;
+  }
+
+  &__header {
+    margin-top: 0;
+
+    @include tablet {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__close {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    cursor: pointer;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 48%;
+    border: 1px solid $cloud;
+    border-radius: 20px;
+    color: $slate;
+
+    @include tablet {
+      width: 72px;
+    }
+
+    &--delete {
+      background-color: $red;
+      color: $white;
+      border: 1px solid $red;
+
+      @include tablet {
+        margin-left: 16px;
+      }
+    }
+
+    & h3 {
+      margin: 0;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: $black, $alpha: 0.7);
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

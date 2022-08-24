@@ -1,0 +1,220 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/fonts" as *;
+
+.warehouse-formpage {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    top: -4rem;
+    background-color: white;
+    
+    @include tablet {
+        width: 91.665%;
+        max-width: 1020px;
+        top: -6rem;
+    }
+
+    &__top-container {
+        display: flex;
+        width: 84.33%;
+        margin-bottom: 16px;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid $cloud;
+        margin: 0 -2rem;
+        padding: 2rem 3rem 1rem 3.5rem;
+
+        @include tablet {
+            margin-inline: 29px auto;
+            margin: 0 -4rem;
+            padding: 2rem 6rem 1.5rem 6rem;
+        }
+        @include desktop{
+            padding-right: 8rem;
+        }
+    }
+
+    &__back-arrow {
+        margin-right: 8px;
+        height: fit-content;
+    }
+
+    &__heading {
+        box-sizing: border-box;
+        margin-block: 0;
+    }
+
+    &__form {
+
+    }
+
+    &__divider {
+        margin: 0;
+        border: 1px solid $cloud;
+
+        &--short {
+            @include tablet {
+                height: 400px;
+                position: relative; 
+                top: 24px;
+            }
+        }
+    }
+}
+
+.warehouse-form {
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        
+    }
+
+
+    &__section {
+        width: 83.33%;
+        margin: auto;
+        margin-bottom: 8px;
+        flex-grow: 1;
+    
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            margin-inline: 5.001% auto;
+        }
+
+        &--details{
+            border-bottom: 1px solid $cloud;
+            margin: 0 -2rem;
+            padding: 0 3.5rem;
+            @include tablet{
+                padding-right: 1rem;
+                padding-left: 2rem;
+                border-bottom: none;
+                border-right: 1px solid $cloud;
+                margin: 2rem 0;
+            }
+
+            & h2 {
+                margin-top: 0rem;
+            }
+        }
+
+        &--contact{
+            @include tablet{
+                padding-right: 1rem;
+                margin-top: 1rem
+            }
+
+            & h2 {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 24px;
+        padding-top: 1rem;
+
+        @include tablet {
+            margin-block: 24px 32px;
+            padding-top: 0;
+        }
+    }
+
+    &__input-container {
+
+        @include tablet {
+            width: 90%;
+        }
+        
+        &--size {
+            @include tablet {
+                width: 90%;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        height: 36px;
+        border-radius: 20px;
+        padding-inline: 16px;
+        width: 100%;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+
+        @include tablet {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__clickables {
+        width: 83.33%;
+        padding-inline: 8.5%;
+        margin-top: 8px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: $light-grey;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-end;
+            padding-inline: 5.001%;
+            width: 100%;
+        }
+    }
+
+    &__button {
+        background-color: $white;
+        text-decoration: none;
+        color: $black;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 1rem;
+        height: 2.25rem;
+        width: 46%;
+        border: 1px solid $cloud;
+        margin-top: 0;
+        padding-inline: 16px;
+        font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+        font-size: 0.813rem; // 13px
+        line-height: 1.25rem; // 20px
+        font-weight: 600; // Demi
+
+        &--add {
+            width: 42%;
+        }
+      
+        @include tablet {
+          font-size: 0.875rem; // 14px
+          line-height: 1.375rem; // 22px
+          width: 73px;
+        }
+
+        &--color {
+            background-color: $indigo;
+            color: $white;
+            width: 55%;
+
+            @include tablet {
+                margin-left: 16px;
+                width: initial;
+            }
+        }
+
+    }
+}

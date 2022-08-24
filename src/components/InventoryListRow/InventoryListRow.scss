@@ -1,0 +1,218 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.inventorylist{
+
+    &__box{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem -1rem;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        border-bottom: 1px solid $cloud;
+
+        @include tablet{
+            padding: 0 2rem;
+            padding-bottom: 1rem;
+            margin: 1rem -2rem;
+            align-items: center;
+            height: 4.75rem;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        @include desktop{
+            margin: 0 -2.5rem;
+            padding: 0 2.5rem;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        &:first-child{
+            padding-top: 1rem;
+
+            @include tablet{
+                padding-top: 0;
+            }
+        }
+
+        &-one{
+            width: 7.5rem;
+            margin-right: 1.719rem;
+
+            @include tablet{
+                width: 8.5rem;
+            }
+
+            &--inventory{
+                @include tablet{
+                    order: 1;
+                    width: 12.5rem;
+                }
+                @include desktop{
+                    width: 8.5rem;
+                }
+            }
+
+            &--category{
+                @include tablet{
+                    order: 2;
+                    width: 7rem;
+                    padding-right: 1.5rem;
+                }
+                @include desktop{
+                    width: 8.5rem;
+                    padding-right: 0;
+                }
+            }
+            &--status{
+                @include tablet{
+                    order: 3;
+                    width: 10rem;
+                }
+
+                @include desktop{
+                    width: 8.5rem;
+                }
+            }
+
+            &--quantity{
+                @include tablet{
+                    order: 4;
+                    width:3rem;
+                }
+                @include desktop{
+                    width: 8.5rem;
+                }
+            }
+            &--warehouse{
+                @include tablet{
+                    order: 5;
+                    width: 8.5rem;
+                    padding-right: .75rem;
+                }
+            }
+            &--empty{
+                display: hidden;
+                @include tablet{
+                    display: none;
+                }
+            }
+        }
+
+        &-title{
+            margin-bottom: 4px;
+
+            @include tablet{
+                display: none;
+            }
+        }
+
+        &-value{
+            margin: 0;
+
+            &--inventory{
+                color: $indigo;
+                margin: 0;
+                display: flex;
+                align-items: center;
+
+                @include desktop{
+                    width: 8.5rem;
+                    margin: 0;
+                }
+                
+                & h3{
+                    margin: 0;
+                    width: fit-content;
+                }
+                & img{
+                    width: 1.2rem;
+                }
+            }
+
+            &--category{
+                @include desktop{
+                    width: 8.5rem;
+                }
+            }
+
+            &--status{
+                color: $green;
+                padding: 0 .75rem;
+                background-color: rgba($color: $green, $alpha: .07);
+                border-radius: 10px;
+                width: fit-content;
+            }
+            &--status-oos{
+                color: $red;
+                padding: 0 .75rem;
+                background-color: rgba($color: $red, $alpha: .07);
+                border-radius: 10px;
+                width: fit-content;
+
+                @include tablet{
+                    width: 4.6rem;
+                }
+            }
+        }
+    }
+    &__box:first-child{
+        border-top: 1px solid $cloud;
+
+        @include tablet{
+            border-top: none;
+        }
+    }
+    &__box:last-child{
+        border-bottom: none;
+    }
+
+    &__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet{
+            margin: 0;
+            padding-right: 1rem;
+            width: 4rem;
+            justify-content: flex-end;
+            order: 5;
+        }
+
+        @include desktop{
+            width: 8.5rem;
+            margin: 0;
+        }
+
+    }
+
+    &__button{
+
+        &--delete{
+            background-image: url(../../assets/Icons/delete_outline-24px.svg);
+            width: 1.3rem;
+            height: 1.3rem;
+            margin-top: 1rem;
+
+            @include tablet{
+                margin-right: 1rem;
+                margin-top: 0;
+
+            }
+        }
+
+        &--edit{
+            @extend .inventorylist__button--delete;
+            background-image: url(../../assets/Icons/edit-24px.svg);
+            background-repeat: no-repeat;
+
+            @include tablet{
+                margin-right: 0;
+            }
+
+            @include desktop{
+                margin-right: 0;
+            }
+        }
+    }
+}
